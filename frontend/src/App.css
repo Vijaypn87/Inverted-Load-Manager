@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.app {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #666;
+}
+
+.capacity-card,
+.form-card,
+.appliance-section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.capacity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.capacity-bar {
+  height: 25px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.capacity-used {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.3s;
+}
+
+.capacity-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button {
+  background: #2563eb;
+  color: white;
+}
+
+.message {
+  padding: 15px;
+  background: #dbeafe;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.appliance-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.appliance-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appliance-info h3 {
+  margin-top: 0;
+}
+
+.appliance-info p {
+  margin: 5px 0;
+}
+
+.appliance-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.state {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.running {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.off {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.shed {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.on-button {
+  background: #22c55e;
+  color: white;
+}
+
+.off-button {
+  background: #f59e0b;
+  color: white;
+}
+
+.delete-button {
+  background: #ef4444;
+  color: white;
+}
+
+.loading {
+  padding: 50px;
+  text-align: center;
+}
+
+.empty {
+  color: #666;
+}
+
+@media (max-width: 700px) {
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .appliance-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .appliance-actions {
+    align-items: flex-start;
+  }
+
+}

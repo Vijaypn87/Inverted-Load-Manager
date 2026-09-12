@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from fastapi import FastAPI, Depends, status, HTTPException
-
+from fastapi.middleware.cors import CORSMiddleware
 from database import Base, engine, SessionLocal
 import models
 import schemas
@@ -18,7 +18,15 @@ Base.metadata.create_all(bind=engine)
 # -----------------------------
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # -----------------------------
 # DATABASE DEPENDENCY
