@@ -1,0 +1,4 @@
+backend/venv
+__pychace__/
+.env
+.db
